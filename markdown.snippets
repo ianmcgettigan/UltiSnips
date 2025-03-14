@@ -80,6 +80,21 @@ snippet spar "Paragraph" b
 $0
 endsnippet
 
+# Basic YAML header
+
+snippet f "quick doc" b
+---
+title: $1
+author: ${2:Ian McGettigan}
+date: ${3:\today}
+geometry: margin=2.2cm
+---
+
+# $4 #
+
+$0
+endsnippet
+
 ###################
 # Text formatting #
 ###################
