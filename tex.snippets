@@ -334,6 +334,7 @@ snippet taylor "taylor" w
 \sum_{${1:k}=${2:0}}^{${3:\infty}} ${4:c_$1} (x-a)^$1 $0
 endsnippet
 
+context "math()"
 snippet lim "limit" iA
 \lim_{${1:n} \to ${2:\infty}} 
 endsnippet
@@ -644,10 +645,12 @@ snippet inn "in " iA
 \in 
 endsnippet
 
+context "math()"
 snippet NN "n" iA
 \mathbb{N}
 endsnippet
 
+context "math()"
 snippet PP "p" iA
 \mathbb{P}
 endsnippet
@@ -670,14 +673,17 @@ snippet nnn "bigcap" iA
 \bigcap_{${1:i \in ${2: I}}} $0
 endsnippet
 
+context "math()"
 snippet OO "emptyset" iA
 \emptyset
 endsnippet
 
+context "math()"
 snippet RR "real" iA
 \mathbb{R}
 endsnippet
 
+context "math()"
 snippet QQ "Q" iA
 \mathbb{Q}
 endsnippet
@@ -727,6 +733,7 @@ snippet case "cases" wA
 \end{cases}
 endsnippet
 
+context "math()"
 snippet SI "SI" iA
 \SI{$1}{$2}
 endsnippet
@@ -793,6 +800,7 @@ snippet HH "H" iA
 \mathbb{H}
 endsnippet
 
+context "math()"
 snippet DD "D" iA
 \mathbb{D}
 endsnippet
@@ -822,6 +830,9 @@ snippet max "max" iA
 \max_{$1} \left\\{ $2 \right\\}$0
 endsnippet
 
+snippet " "Quotes" A
+\`\`${1}''${0}
+endsnippet
 
 
 # vim:ft=snippets
