@@ -158,7 +158,7 @@ endsnippet
 
 snippet mk "Math" wA
 $${1}$`!p
-if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';', ':']:
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ';', ':', ')']:
 	snip.rv = ' '
 else:
 	snip.rv = ''
@@ -255,6 +255,7 @@ snippet == "equals" iA
 &= $1 \\\\
 endsnippet
 
+context "math()"
 snippet neq "equals" iA
 \neq 
 endsnippet
@@ -326,6 +327,11 @@ snippet ul "underline" iA
 endsnippet
 
 context "math()"
+snippet und "underbrace" iA
+\underbrace{$0
+endsnippet
+
+context "math()"
 snippet sum "sum" iA
 \sum_{${1:n=1}}^{${2:\infty}} ${3:a_n z^n}
 endsnippet
@@ -365,7 +371,7 @@ endsnippet
 
 context "math()"
 snippet bf "mathbf" iA
-\mathbf{$1} $0
+\mathbf{$1}$0
 endsnippet
 
 context "math()"
@@ -537,7 +543,7 @@ endsnippet
 
 priority 100
 context "math()"
-snippet '(?<!\\)(alpha|beta|gamma|delta|zeta|theta|lambda|mu)' "ln" rwA
+snippet '(?<![A-Za-z\\])(alpha|beta|chi|gamma|delta|zeta|eta|theta|lambda|mu)(?![A-Za-z])' "Greek letters" rA
 \\`!p snip.rv = match.group(1)`
 endsnippet
 
@@ -812,7 +818,7 @@ $0
 endsnippet
 
 snippet vps "varepsilon" iA
-\varepsilon 
+\varepsilon$0
 endsnippet
 
 context "math()"
